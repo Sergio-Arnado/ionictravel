@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Agregar Precio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Ingrese el Valor</ion-label>
+    <ion-input type="number" [(ngModel)]="DeletePlace" placeholder="Valor"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="confirmarEliminacion()">Confirmar</ion-button>
+  <ion-button expand="full" color="medium" (click)="cerrarModal()">Cancelar</ion-button>
+
+
+  <div *ngIf="DeletePlace">
+    Valor Formateado: {{ DeletePlace | currency:'USD':'symbol':'1.2-2' }}
+  </div>
+</ion-content>
